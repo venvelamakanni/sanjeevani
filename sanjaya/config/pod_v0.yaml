@@ -1,0 +1,9 @@
+# HANUMAN placeholder v0. Order-of-magnitude values so reachability has numbers.
+# Replaced by the OpenVSP/VSPAERO aero table when the 3D track delivers it.
+name: hanuman_v0
+mass_kg: 300
+ld_ratio: 8
+thrust_n: 370
+endurance_s: 900          # 15 min powered
+cruise_speed_mps: 61      # ~220 km/h, slow on purpose: speed is what injures
+stabilise_delay_s: 2.0    # separation dynamics are out of scope; assume stable at T+2 s

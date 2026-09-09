@@ -1,0 +1,8 @@
+# Ranking weights (Phase 4). Tunable. Territory is NOT here: it is a hard filter.
+reachability_confidence: 5.0
+surface_quality: 3.0
+distance: 2.0
+threat_exposure: 4.0
+weather: 2.0
+medical_urgency: 3.0
+rescue_reachability: 2.0
