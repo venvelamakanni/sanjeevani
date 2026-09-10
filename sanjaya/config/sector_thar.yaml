@@ -10,3 +10,8 @@ bbox:
 border_rule: hard         # crossing the IB is prohibited, never merely penalised
 min_border_margin_m: 2000 # floor; live margin grows with position uncertainty
 advisor_rate_hz: 1.0
+world:                      # digital-twin data layers, fetched by scripts/fetch_world_data.py
+  dem_product: glo90        # Copernicus GLO-90; switch to glo30 when slope detail matters (2 GB)
+  landcover_res_deg: 0.001  # ESA WorldCover 10 m decimated to ~100 m
+  road_classes: [motorway, trunk, primary]
+  airfield_types: [large_airport, medium_airport, small_airport]

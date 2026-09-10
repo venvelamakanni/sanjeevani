@@ -8,9 +8,11 @@ Sampled every 5 s so the 1 Hz replayer has to interpolate.
 from __future__ import annotations
 
 import csv
+import sys
 from pathlib import Path
 
-from sanjaya.core.geodesy import LatLon, destination, wrap_deg
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # run from a checkout without installing
+from sanjaya.core.geodesy import LatLon, destination, wrap_deg  # noqa: E402
 
 OUT = Path(__file__).resolve().parents[1] / "data" / "tracks" / "thar_sortie_01.csv"
 

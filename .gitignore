@@ -7,3 +7,9 @@ runs/
 dist/
 build/
 .venv/
+
+# digital-twin rasters and road extracts are fetched, not committed (scripts/fetch_world_data.py)
+data/world/cache/
+data/world/*/dem.tif
+data/world/*/landcover.tif
+data/world/*/roads.geojson

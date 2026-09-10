@@ -7,7 +7,10 @@ name = "sanjaya"
 version = "0.0.1"
 description = "SANJAYA: the autonomous safe-location and escape-flight brain of Project SANJEEVANI"
 requires-python = ">=3.11"
-dependencies = ["pyproj>=3.6", "pydantic>=2.5", "pyyaml>=6.0"]
+dependencies = [
+    "pyproj>=3.6", "pydantic>=2.5", "pyyaml>=6.0",
+    "numpy>=1.26", "rasterio>=1.4", "shapely>=2.0", "pyshp>=2.3",
+]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "hypothesis>=6"]
@@ -17,3 +20,8 @@ include = ["sanjaya*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]   # tests never depend on the editable install being visible
+filterwarnings = [
+    # rasterio internals still use Affine '*'; not ours to fix
+    "ignore:Use `@` matmul instead of `\\*` mul operator:PendingDeprecationWarning",
+]

@@ -75,6 +75,18 @@ def from_enu(origin: LatLon, e: ENU) -> LatLon:
     return destination(origin, az, d)
 
 
+def metres_per_degree(lat: float) -> tuple[float, float]:
+    """(metres per degree of latitude, metres per degree of longitude) at latitude lat.
+
+    Standard WGS84 series expansion; accurate to ~1 cm/deg. Used to turn raster
+    pixel spacing in degrees into metres for slope calculation.
+    """
+    phi = math.radians(lat)
+    m_lat = 111132.954 - 559.822 * math.cos(2 * phi) + 1.175 * math.cos(4 * phi)
+    m_lon = 111412.84 * math.cos(phi) - 93.5 * math.cos(3 * phi) + 0.118 * math.cos(5 * phi)
+    return m_lat, m_lon
+
+
 def wrap_deg(x: float) -> float:
     """Wrap an angle to [0, 360)."""
     return x % 360.0

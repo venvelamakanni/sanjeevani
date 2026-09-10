@@ -1,0 +1,62 @@
+ident,type,name,lat,lon,elevation_m,iso_country,municipality,iata_code,gps_code
+IN-0085,small_airport,Fury Airport,26.434072,73.101472,234.1,IN,"Karwar, Jodhpur",,VAJO
+IN-0096,small_airport,Akli Airport,25.807700,70.294300,70.1,IN,Akli,,
+IN-0364,small_airport,Abu Road Airport,24.494200,72.781502,266.7,IN,,,
+IN-0373,small_airport,Tarpura Airfield,27.729912,75.240860,437.1,IN,Dadiya,,
+IN-VA38,small_airport,Sirohi Airport,24.895100,72.845901,304.8,IN,,,VA38
+OP10,small_airport,Thar Airport,27.203205,69.148840,50.9,PK,Kandanwari,KCF,OPKW
+OP13,small_airport,Mad Jamu Airport,28.356199,70.600197,78.0,PK,Mad Jamu Kholelan,,OP13
+OP14,small_airport,Belab Airport,30.340000,70.556702,114.9,PK,Belab,,OP14
+OP15,small_airport,Ouzkani Airport,30.250780,70.232050,710.5,PK,Khandor,,OP15
+OP16,small_airport,UEPL Khaskheli Airstrip,24.787201,68.557198,4.9,PK,Badin,,OP16
+OP18,small_airport,Kot Addu Airport,30.494900,70.971100,128.9,PK,Kot  Addu,,OP18
+OP21,small_airport,Vehari Airport,30.091400,72.153801,131.1,PK,Vehari,,OP21
+OP22,small_airport,Rajanpur Airport,29.264000,70.186401,122.2,PK,Rajanpur,,OP22
+OP31,small_airport,Kashmor Airport,28.470600,69.599098,79.2,PK,Kashmor,,OP31
+OP32,small_airport,Khairpur Airport,28.036100,69.674896,91.4,PK,Khairpur,,OP32
+OP33,small_airport,Kandhkot Airport,28.274000,69.276001,76.2,PK,Kandhkot,,OP33
+OP37,small_airport,Pano Aqil Southeast Airport,27.813101,69.167099,61.0,PK,Pano Aqil,,OP37
+OPBL,small_airport,Bela Airport,29.492201,71.118401,105.8,PK,Khan Bela,,OPBL
+OPBR,small_airport,Bahawalnagar Airport,29.946301,73.249100,152.4,PK,Bahawalnagar,WGB,OPBR
+OPBW,medium_airport,Bahawalpur Airport,29.348101,71.718002,119.5,PK,Bahawalpur,BHV,OPBW
+OPDG,medium_airport,Dera Ghazi Khan Airport,29.961000,70.485901,150.0,PK,Dera Ghazi Khan,DEA,OPDG
+OPDK,small_airport,Daharki Airport,28.500000,69.699997,83.5,PK,Daharki,,OPDK
+OPJA,medium_airport,Shahbaz Air Base,28.284201,68.449699,56.4,PK,Jacobabad,JAG,OPJA
+OPKD,small_airport,Hyderabad Airport,25.318100,68.366096,39.6,PK,Hyderabad,HDD,OPKD
+OPKE,small_airport,Chore Airport,25.525999,69.771797,61.0,PK,Chore,,OPKE
+OPLL,small_airport,Loralai Airport,30.355499,68.613503,1411.5,PK,Loralai,LRG,OPLL
+OPMK,small_airport,Mirpur Khas Air Base,25.682501,69.072800,54.9,PK,Mirpur Khas,,OPMK
+OPMP,small_airport,Sindhri Tharparkar Airport,25.682800,69.072800,15.5,PK,Sindhri,MPD,OPMP
+OPMT,large_airport,Multan International Airport,30.203199,71.419098,122.8,PK,Multan,MUX,OPMT
+OPNH,medium_airport,Shaheed Benazirabad Airport,26.219400,68.390099,29.0,PK,Nawabashah,WNS,OPNH
+OPOK,small_airport,Okara Cantonment Airstrip,30.740999,73.357697,173.1,PK,Okara,,OPOK
+OPRK,medium_airport,Shaikh Zaid Airport,28.383900,70.279602,82.6,PK,Rahim Yar Khan,RYK,OPRK
+OPSK,medium_airport,Begum Nusrat Bhutto International Airport Sukkur,27.722000,68.791702,59.7,PK,Sukkur,SKZ,OPSK
+OPSU,medium_airport,Sui Airport,28.645100,69.176903,232.6,PK,Sui,SUL,OPSU
+OPSW,small_airport,Sawan Airport,26.966200,68.878098,48.8,PK,Sawan Gas Field,RZS,OPSW
+OPTH,small_airport,Talhar Airport,24.841499,68.838402,8.5,PK,Badin,BDN,OPTH
+PK-0014,small_airport,Khanpur Airport,28.643333,70.632500,86.3,PK,Khanpur,,
+PK-0016,small_airport,Petaro Airport,25.544800,68.326500,34.4,PK,Cadet College Petaro,,
+PK-0045,small_airport,Jamal Din Wali Airport,28.506760,70.063050,82.9,PK,Rahim Yar Khan,,
+PK-0046,small_airport,Al Ghaba Airstrip,28.298120,70.489360,84.1,PK,Rahim Yar Khan,,
+PK-0047,small_airport,Qadirpur Airport,28.050910,69.360570,71.0,PK,Ghotki,,
+PK-0092,medium_airport,Mai Bakhtawar International Airport,24.846862,70.096109,55.5,PK,Islamkot,,
+VA1H,small_airport,Ondwa Airport,25.141500,74.611504,442.0,IN,,,VA1H
+VA1N,small_airport,Nimach Airport,24.430799,74.867798,492.9,IN,,,VA1N
+VA2A,small_airport,Phalodi Airport,27.112900,72.389000,238.0,IN,,,VA2A
+VADS,small_airport,Deesa Airport,24.267900,72.204399,147.8,IN,Deesa,,VADS
+VAUD,medium_airport,Maharana Pratap Airport,24.617701,73.896103,513.3,IN,Udaipur,UDR,VAUD
+VI43,small_airport,Suratgarh New Airport,29.387800,73.903900,168.9,IN,,,VI43
+VI69,small_airport,Jhunjhunu Airport,28.106701,75.375603,338.3,IN,,,VI69
+VI70,small_airport,Pilani New Airport,28.348801,75.593697,335.3,IN,,,VI70
+VI73,small_airport,Nagaur Airport,27.208300,73.711403,289.6,IN,,,VI73
+VIBK,medium_airport,Nal Airport,28.070601,73.207199,228.6,IN,Bikaner,BKB,VIBK
+VIBT,medium_airport,Bhatinda Air Force Station,30.270100,74.755798,201.8,IN,,BUP,VIBT
+VIHR,large_airport,Maharaja Agrasen International Airport,29.186065,75.741420,213.4,IN,Hisar,HSS,VIHR
+VIHX,large_airport,Halwara International Airport,30.748501,75.629799,240.8,IN,Halwara,HWR,VIHX
+VIJO,medium_airport,Jodhpur Airport,26.251101,73.048897,218.5,IN,Jodhpur,JDH,VIJO
+VIJR,medium_airport,Jaisalmer Airport,26.888700,70.864998,228.9,IN,,JSA,VIJR
+VIKG,medium_airport,Kishangarh Airport Ajmer,26.591007,74.812956,,IN,Ajmer (Kishangarh),KQH,VIKG
+VIPX,small_airport,Phalodi Air Force Station,27.104866,72.212894,,IN,,,VIPX
+VISA,medium_airport,Sirsa Air Force Station,29.560600,75.006104,198.1,IN,,,VISA
+VIUT,small_airport,Uttarlai Airport,25.813000,71.482300,152.4,IN,,,VIUT

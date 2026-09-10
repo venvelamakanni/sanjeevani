@@ -8,9 +8,10 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from sanjaya.config import SectorConfig, load_default
-from sanjaya.sim.runlog import RunLogger, read_run
-from sanjaya.sim.track import load_track, replay
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # run from a checkout without installing
+from sanjaya.config import SectorConfig, load_default  # noqa: E402
+from sanjaya.sim.runlog import RunLogger, read_run  # noqa: E402
+from sanjaya.sim.track import load_track, replay  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 

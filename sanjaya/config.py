@@ -42,6 +42,18 @@ class BoundingBox(_Strict):
         return self
 
 
+class WorldLayersConfig(_Strict):
+    """How the digital twin's data layers are fetched and gridded for a sector."""
+    dem_product: str = Field(default="glo90", pattern="^glo(30|90)$",
+                             description="Copernicus DEM product: glo90 (~250 MB) or glo30 (~2 GB)")
+    landcover_res_deg: float = Field(default=0.001, gt=0, le=0.01,
+                                     description="ESA WorldCover decimated to this grid (0.001 deg ~ 100 m)")
+    road_classes: tuple[str, ...] = Field(default=("motorway", "trunk", "primary"),
+                                          description="OSM highway= values kept as landing-road candidates")
+    airfield_types: tuple[str, ...] = Field(default=("large_airport", "medium_airport", "small_airport"),
+                                            description="OurAirports type= values kept")
+
+
 class SectorConfig(_Strict):
     name: str
     country: str
@@ -49,6 +61,7 @@ class SectorConfig(_Strict):
     border_rule: str = Field(pattern="^hard$", description="only 'hard' is permitted")
     min_border_margin_m: float = Field(ge=0)
     advisor_rate_hz: float = Field(gt=0)
+    world: WorldLayersConfig = Field(default_factory=WorldLayersConfig)
 
 
 class WeightsConfig(_Strict):
