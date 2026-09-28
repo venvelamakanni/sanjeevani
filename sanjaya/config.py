@@ -25,8 +25,13 @@ class PodConfig(_Strict):
     ld_ratio: float = Field(gt=0, description="deployed glide ratio L/D")
     thrust_n: float = Field(ge=0)
     endurance_s: float = Field(ge=0, description="powered endurance in seconds")
-    cruise_speed_mps: float = Field(gt=0)
+    cruise_speed_mps: float = Field(gt=0, description="equivalent airspeed at L/D max, used for cruise and glide")
     stabilise_delay_s: float = Field(ge=0, description="handover to stable flight after separation")
+    kinetic_energy_recovery: float = Field(default=0.0, ge=0, le=1,
+                                           description="fraction of excess release speed credited as height")
+    aero_table: str | None = Field(default=None,
+                                   description="OpenVSP/VSPAERO polar; replaces ld_ratio and the glide speed")
+    sref_m2: float | None = Field(default=None, gt=0, description="reference wing area for the aero table")
 
 
 class BoundingBox(_Strict):

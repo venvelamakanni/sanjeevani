@@ -7,14 +7,14 @@ From engine start to touchdown, SANJAYA continuously knows the single best reach
 safe place inside friendly territory, and after ejection flies the pod there.
 First target sector: Thar / Rajasthan, India's north-west border.
 
-## Status: Phase 1 complete
+## Status: Phase 2 complete
 
 | Phase | State |
 |---|---|
 | 0. Foundations (geodesy, config, track replay, run log) | Done |
 | 1. Thar digital twin (DEM, border, airfields, land cover, roads) | Done |
-| 2. HANUMAN v0 energy model | Next |
-| 3. Candidates + reachability + hard border | |
+| 2. HANUMAN v0 energy model (ISA, glide + powered reach, wind, aero table) | Done |
+| 3. Candidates + reachability + hard border | Next |
 | 4. Ranking | |
 | 5. Advisor loop (first demo) | |
 
@@ -30,6 +30,7 @@ python scripts/fetch_world_data.py       # ~300 MB: DEM tiles, land cover, roads
 pytest                                   # now also checks the twin against known places
 python scripts/query_point.py 26.2515 73.0489   # Phase 1 end-to-end: "click" a point
 python scripts/replay_track.py           # Phase 0 end-to-end
+python scripts/reach_demo.py             # Phase 2 end-to-end: reach table + footprint at the sortie hit
 ```
 
 `editable_mode=compat` writes a plain path entry instead of an import hook. Python 3.14
@@ -41,11 +42,13 @@ over inside `~/Documents`; the scripts also add the repo root to `sys.path` them
 ```
 sanjaya/core/        deterministic core: pure, typed, no I/O, no randomness, no ML
 sanjaya/world/       digital twin: DEM, land cover, border, airfields, roads, WorldModel facade
+sanjaya/pod/         aero-table reader; pod config -> PodPerformance
 sanjaya/config/      pod_v0.yaml, sector_thar.yaml, weights.yaml
 sanjaya/sim/         track loader/replayer, append-only run log
-sanjaya/pod|estimation|advisor|flight|adapters   (later phases)
+sanjaya/estimation|advisor|flight|adapters   (later phases)
 data/world/          per-sector twin data (see data/world/README.md for sources and licences)
 data/tracks/         recorded and synthetic sorties
+data/aero/           aero tables; synthetic_ld8.* reproduce pod_v0 for testing
 scripts/             runnable entry points
 tests/               pytest + hypothesis; synthetic-world tests plus real-Thar checks
 ```
@@ -62,6 +65,23 @@ info = world.query(LatLon(26.2515, 73.0489))
 # info.elevation_m, info.slope_deg, info.surface, info.inside_india,
 # info.border_distance_m (signed), info.nearest_airfields, info.nearest_road
 ```
+
+## Reach in one call
+
+```python
+from sanjaya.config import PodConfig, load_default
+from sanjaya.core.atmosphere import Atmosphere
+from sanjaya.core.energy import Wind, reach
+from sanjaya.pod.model import performance_from_config
+
+pod = performance_from_config(load_default(PodConfig, "pod_v0.yaml"))
+r = reach(pod, alt_m=5875, site_elev_m=234, track_deg=60,
+          wind=Wind(10, from_deg=240), atm=Atmosphere(isa_offset_c=20))
+# r.distance_m, r.powered_m, r.glide_m, r.time_s, r.holds_track
+```
+
+To fly a real pod, set `aero_table` (and `sref_m2` if the file lacks it) in `pod_v0.yaml`
+to the VSPAERO polar. Nothing else changes.
 
 ## Rules the code enforces
 

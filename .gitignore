@@ -13,3 +13,6 @@ data/world/cache/
 data/world/*/dem.tif
 data/world/*/landcover.tif
 data/world/*/roads.geojson
+
+# macOS
+.DS_Store

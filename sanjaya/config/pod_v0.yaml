@@ -3,7 +3,10 @@
 name: hanuman_v0
 mass_kg: 300
 ld_ratio: 8
-thrust_n: 370
+thrust_n: 370             # just above cruise drag (300 kg * g / 8 = 368 N), so it can hold level
 endurance_s: 900          # 15 min powered
-cruise_speed_mps: 61      # ~220 km/h, slow on purpose: speed is what injures
+cruise_speed_mps: 61      # ~220 km/h EAS at L/D max, slow on purpose: speed is what injures
 stabilise_delay_s: 2.0    # separation dynamics are out of scope; assume stable at T+2 s
+kinetic_energy_recovery: 0.0   # credit none of the jet's excess speed as height (conservative)
+aero_table: null          # e.g. ../../data/aero/hanuman_v1.polar, relative to this file
+sref_m2: null             # required with aero_table unless the table file declares it
